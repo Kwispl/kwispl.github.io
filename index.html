@@ -4,12 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kwispl - Huisdierenoppas in Landegem, Nevele, Merendree en Hansbeke</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 <meta name="description" content="Betrouwbare en liefdevolle huisdierenoppas in regio Landegem, Nevele, Merendree en Hansbeke. Boek eenvoudig via mijn Pawshake-profiel of mail naar info@kwispl.be!">
 <meta name="keywords" content="huisdierenoppas Landegem, huisdierenoppas Nevele, huisdierenoppas Merendree, huisdierenoppas Hansbeke, dierenoppas, Kwispl">
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 <style>
 body {
   font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
   margin: 0;
   color: #333;
   background-color: #fffdf9;
@@ -30,9 +33,14 @@ header p {
 }
 section {
   padding: 2em 1em;
-  max-width: 900px;
   margin: auto;
 }
+
+.c-holder__alpha {
+  width: 100%;
+  background-color: #e6f0ed;
+}
+
 section h2 {
   color: #e07a5f;
   font-size: 1.8em;
@@ -69,7 +77,52 @@ footer {
   background: #f7f1d1;
   margin-top: 2em;
 }
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.grafiek-section {
+  padding: 4em 0;
+}
+
+.grafiek-section .inner {
+  padding: 2em;
+  border-radius: 8px;
+  max-width: 1140px;
+  margin: 2em auto;
+}
+
+.grafiek-section h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.grafiek-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.grafiek-tekst {
+  flex: 2 1 60%;
+  max-width: 66.66%;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.grafiek-container {
+  flex: 1 1 30%;
+  max-width: 33.33%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 </style>
+
 </head>
 <body>
 
@@ -79,29 +132,122 @@ footer {
 </header>
 
 <section>
-  <h2>Welkom!</h2>
-  <p>Op zoek naar een vrolijke en betrouwbare huisdierenoppas in <strong>Landegem, Nevele, Merendree of Hansbeke</strong>? Bij <strong>Kwispl</strong> is jouw huisdier in goede handen. Ik verzorg je hond, kat of ander dier met veel liefde, zodat jij zorgeloos weg kan.</p>
+  <div class="container">
+    <h2>Welkom!</h2>
+    <p>Op zoek naar een vrolijke en betrouwbare huisdierenoppas in <strong>Landegem, Nevele, Merendree of Hansbeke</strong>? Bij <strong>Kwispl</strong> is jouw huisdier in goede handen. Ik verzorg je hond, kat of ander dier met veel liefde, zodat jij zorgeloos weg kan.</p>
 
-  <h2>Waarom kiezen voor Kwispl?</h2>
-  <ul>
-    <li>Liefde voor dieren, ervaring en een persoonlijke aanpak</li>
-    <li>Altijd in jouw buurt: Landegem, Nevele, Merendree en Hansbeke</li>
-    <li>Betrouwbaar en zorgzaam</li>
-  </ul>
+    <h2>Waarom kiezen voor Kwispl?</h2>
+    <ul>
+      <li>Liefde voor dieren, ervaring en een persoonlijke aanpak</li>
+      <li>Altijd in jouw buurt: Landegem, Nevele, Merendree en Hansbeke</li>
+      <li>Betrouwbaar en zorgzaam</li>
+    </ul>
 
-  <p>Boeken kan makkelijk via mijn <strong>Pawshake-profiel</strong>:</p>
-  <p><a href="https://nl.pawshake.be/sitter/EU_aAcTVv3sDBN" class="button" target="_blank">Boek via Pawshake</a></p>
+    <p>Boeken kan makkelijk via mijn <strong>Pawshake-profiel</strong>:</p>
+    <p><a href="https://nl.pawshake.be/sitter/EU_aAcTVv3sDBN" class="button" target="_blank">Boek via Pawshake</a></p>
+  </div>
+</section>
+
+<section class="grafiek-section c-holder__alpha">
+  <div class="inner">
+    <h2>Wie wint de strijd om mijn speeltijd?</h2>
+    <div class="grafiek-content">
+      <div class="grafiek-tekst">
+        <p>
+          Wist je dat katten en honden samen een geniepig complot hebben gesmeed om mijn agenda helemaal vol te boeken?
+          Ze weten precies wanneer jij op vakantie gaat en wie mij het eerst belt.
+          Soms lijkt het alsof ze onderling afspraken maken om me geen vrije dag meer te gunnen. <br><br>
+          Hier zie je in één oogopslag hoe de verschillende diersoorten mij in hun pootjes hebben… letterlijk verdeeld!
+        </p>
+      </div>
+      <div class="grafiek-container">
+        <canvas id="grafiek"></canvas>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section>
-  <h2>Contact</h2>
-  <p>Heb je vragen of wil je eerst kennismaken? Mail me gerust, ik antwoord zo snel mogelijk!</p>
-  <p><a href="mailto:info@kwispl.be" class="button">Mail naar info@kwispl.be</a></p>
+  <div class="container">
+    <h2>Contact</h2>
+    <p>Heb je vragen of wil je eerst kennismaken? Mail me gerust, ik antwoord zo snel mogelijk!</p>
+    <p><a href="mailto:info@kwispl.be" class="button">Mail naar info@kwispl.be</a></p>
+  </div>
 </section>
+
+
 
 <footer>
   &copy; 2025 Kwispl - Huisdierenoppas | Landegem - Nevele - Merendree - Hansbeke
 </footer>
+
+
+<script>
+fetch('clients.json')
+  .then(response => response.json())
+  .then(data => {
+    // 1. Alle soorten verzamelen
+    const soorten = [];
+    data.klanten.forEach(k => {
+      k.soort_beestje.forEach(s => {
+        soorten.push(s.trim().toLowerCase());
+      });
+    });
+
+    // 2. Tellen
+    const tellingen = {};
+    soorten.forEach(soort => {
+      tellingen[soort] = (tellingen[soort] || 0) + 1;
+    });
+
+    const labels = Object.keys(tellingen).map(s => s.charAt(0).toUpperCase() + s.slice(1));
+    const aantallen = Object.values(tellingen);
+
+    const kleuren = [
+      '#81b29a', '#f7c59f', '#e07a5f', '#3d405b', '#f2cc8f', '#6d9d88', '#b8c1ec'
+    ];
+
+    const ctx = document.getElementById('grafiek').getContext('2d');
+
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: labels,
+        datasets: [{
+          data: aantallen,
+          backgroundColor: kleuren.slice(0, labels.length),
+          borderWidth: 0,
+          hoverOffset: 0,
+          hoverBackgroundColor: kleuren.slice(0, labels.length),
+          hoverBorderColor: kleuren.slice(0, labels.length)
+        }]
+      },
+      options: {
+        plugins: {
+          tooltip: {
+            enabled: false
+          },
+          datalabels: {
+            formatter: (value, context) => {
+              const total = context.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+              const percentage = (value / total * 100).toFixed(1) + '%';
+              return percentage;
+            },
+            color: '#fff',
+            font: {
+              size: 16,
+              weight: 'bold'
+            }
+          }
+        }
+      },
+      plugins: [ChartDataLabels]
+    });
+  })
+  .catch(error => {
+    console.error("Fout bij laden van clients.json:", error);
+  });
+</script>
 
 </body>
 </html>
