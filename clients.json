@@ -1,0 +1,13 @@
+{
+  "klanten": [
+    {
+      "baasje": "Jonathan",
+      "beestje": "Momo",
+      "soort_beestje": "Kat",
+      "review": "nog geen",
+      "locatie": "Nevele",
+      "aantal_keeren": 3,
+      "aantal_dagen": 55
+    }
+  ]
+}
