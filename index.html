@@ -53,8 +53,16 @@ ul {
   list-style: paw;
   padding-left: 1.5em;
 }
-ul li::marker {
-  content: "🐾 ";
+ul li {
+  list-style: none;
+  position: relative;
+  padding-left: .5em;
+}
+
+ul li::before {
+  content: "🐾";
+  position: absolute;
+  left: -24px;
 }
 a.button {
   display: inline-block;
@@ -75,7 +83,15 @@ footer {
   font-size: 0.9em;
   color: #777;
   background: #f7f1d1;
-  margin-top: 2em;
+}
+
+footer a {
+  color: #3d405b;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 .container {
@@ -198,6 +214,8 @@ footer {
 
 <footer>
   &copy; 2025 Kwispl - Huisdierenoppas | Landegem - Nevele - Merendree - Hansbeke
+  <br>
+  <a href="https://zofie.be" target="_blank">Website door Zofie</a> & <a href="https://ctrlchaos.be" target="_blank">CtrlChaos</a>
 </footer>
 
 
@@ -266,7 +284,7 @@ fetch('clients.json')
     const totaalKeren = data.klanten.reduce((sum, klant) => sum + klant.aantal_keren, 0);
     const totaalDagen = data.klanten.reduce((sum, klant) => sum + klant.aantal_dagen, 0);
 
-    const gemiddeld = (totaalDagen / totaalKeren).toFixed(1);
+    const gemiddeld = (totaalDagen / totaalKeren).toFixed(0);
 
     document.getElementById('gemiddeld-tekst').textContent = `Gemiddeld word ik ${gemiddeld} dagen per boeking ingeschakeld.`;
   })
