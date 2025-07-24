@@ -84,3 +84,28 @@ fetch('clients.json')
       }
     });
   });
+
+
+// COOKIES 
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const banner = document.getElementById("cookie-banner");
+    const button = document.getElementById("cookie-accept");
+    const THIRTY_DAYS = 30 * 24 * 60 * 60 * 1000;
+
+    const acceptedAt = localStorage.getItem("cookieAcceptedAt");
+
+    const isAcceptedRecently = acceptedAt && (Date.now() - Number(acceptedAt)) < THIRTY_DAYS;
+
+    if (!isAcceptedRecently) {
+      banner.style.display = "flex";
+    } else {
+      banner.style.display = "none";
+    }
+
+    button.addEventListener("click", () => {
+      localStorage.setItem("cookieAcceptedAt", Date.now().toString());
+      banner.style.display = "none";
+    });
+  });
