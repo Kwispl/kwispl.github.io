@@ -1,0 +1,130 @@
+@charset "UTF-8";
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  margin: 0;
+  color: #333;
+  background-color: #fffdf9; }
+
+header {
+  background: linear-gradient(45deg, #f7c59f, #f7f1d1);
+  padding: 2em 1em;
+  text-align: center;
+  color: #4d3e3e; }
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em; }
+
+header p {
+  font-size: 1.2em;
+  margin-top: 0.5em; }
+
+section {
+  padding: 2em 1em;
+  margin: auto; }
+
+.c-holder__alpha {
+  width: 100%;
+  background-color: #e6f0ed; }
+
+section h2 {
+  color: #e07a5f;
+  font-size: 1.8em;
+  margin-bottom: 0.5em; }
+
+section p, section li {
+  font-size: 1.1em; }
+
+ul {
+  list-style: paw;
+  padding-left: 1.5em; }
+
+ul li {
+  list-style: none;
+  position: relative;
+  padding-left: .5em; }
+
+ul li::before {
+  content: "🐾";
+  position: absolute;
+  left: -24px; }
+
+a.button {
+  display: inline-block;
+  background: #81b29a;
+  color: white;
+  padding: 0.7em 1.2em;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  margin-top: 1em; }
+
+a.button:hover {
+  background: #6d9d88; }
+
+footer {
+  text-align: center;
+  padding: 1em;
+  font-size: 0.9em;
+  color: #777;
+  background: #f7f1d1; }
+
+footer a {
+  color: #3d405b;
+  text-decoration: none; }
+
+footer a:hover {
+  text-decoration: underline; }
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto; }
+
+.grafiek-section {
+  padding: 4em 0; }
+
+.weetje {
+  background-color: #fff8e6;
+  border-left: 5px solid #e07a5f;
+  padding: 1em;
+  margin-top: 4em;
+  font-size: 1.1em;
+  color: #333; }
+
+.weetje strong {
+  color: #e07a5f; }
+
+.grafiek-section .inner {
+  padding: 2em;
+  border-radius: 8px;
+  max-width: 1140px;
+  margin: 2em auto; }
+
+.grafiek-section h2 {
+  text-align: center;
+  margin-bottom: 1em; }
+
+.grafiek-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em; }
+
+.grafiek-tekst {
+  flex: 2 1 60%;
+  max-width: 66.66%;
+  font-size: 1.1em;
+  color: #333; }
+
+.grafiek-container {
+  flex: 1 1 30%;
+  max-width: 33.33%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.logo {
+  max-height: 200px; }
+
+/*# sourceMappingURL=style.css.map */
