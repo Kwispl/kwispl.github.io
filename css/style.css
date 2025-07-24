@@ -152,6 +152,10 @@ footer a:hover {
   list-style-type: disc;
   color: #333; }
 
+.pakket em a {
+  color: #3e4e47;
+  text-decoration: underline dotted; }
+
 .opmerking {
   background: #eef1ee;
   margin-top: 2rem;
