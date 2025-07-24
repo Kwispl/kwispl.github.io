@@ -112,18 +112,24 @@ footer a:hover {
 }
 
 .grafiek-tekst {
-  flex: 2 1 60%;
-  max-width: 66.66%;
-  color: #333;
+    @media (min-width: 768px) {
+        flex: 2 1 60%;
+        max-width: 66.66%;
+        color: #333;
+    }
 }
 
 .grafiek-container {
-  flex: 1 1 30%;
-  max-width: 33.33%;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 300px;
+    margin: 0 auto;
+    @media (min-width: 768px) {
+        flex: 1 1 30%;
+        max-width: 33.33%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .logo {
