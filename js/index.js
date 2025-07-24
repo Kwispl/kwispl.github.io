@@ -109,3 +109,8 @@ fetch('clients.json')
       banner.style.display = "none";
     });
   });
+
+
+// Show current year in footer
+
+document.getElementById("copyright-year").innerHTML = `&copy; ${new Date().getFullYear()}`;

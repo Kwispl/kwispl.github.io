@@ -390,3 +390,16 @@ footer a:hover {
 .cookie-banner button:hover {
   background: #a0b69e;
 }
+
+.insta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+}
+
+.insta-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
