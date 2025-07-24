@@ -19,6 +19,10 @@ header h1 {
 header p {
   margin-top: 0.5em; }
 
+main {
+  margin-top: 100px;
+  margin-bottom: 100px; }
+
 section {
   padding: 2em 1em;
   margin: auto; }
@@ -32,16 +36,16 @@ h2 {
   color: #e07a5f;
   margin-bottom: 1em; }
 
-ul {
+ul.pootjes-lijst {
   list-style: paw;
   padding-left: 1.5em; }
 
-ul li {
+ul.pootjes-lijst li {
   list-style: none;
   position: relative;
   padding-left: .5em; }
 
-ul li::before {
+ul.pootjes-lijst li::before {
   content: "🐾";
   position: absolute;
   left: -24px; }
@@ -74,6 +78,10 @@ footer a:hover {
 
 .container {
   max-width: 1140px;
+  margin: 0 auto; }
+
+.container-text {
+  max-width: 760px;
   margin: 0 auto; }
 
 .grafiek-section {
