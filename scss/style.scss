@@ -140,3 +140,65 @@ footer a:hover {
 .logo {
   max-height: 200px;
 }
+
+.over-mij {
+  padding: 3rem 1rem;
+  background: #f4f7f5;
+}
+
+.over-mij {
+  padding: 3rem 1rem;
+  background: #f4f7f5;
+}
+
+
+.over-mij-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+}
+
+.over-mij-tekst {
+  line-height: 1.7;
+  color: #333;
+  @media (min-width: 768px) {
+    width: 75%;
+  }
+}
+
+.over-mij-foto {
+  
+  text-align: center;
+
+  @media (min-width: 768px) {
+    margin-top: 110px;
+    width: 25%;
+  }
+}
+
+.over-mij-foto img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.over-mij-tekst strong {
+  color: #3e4e47; /* accentkleur van je site */
+}
+
+/* 📱 Responsieve aanpassing */
+@media (max-width: 768px) {
+  .over-mij-content {
+    flex-direction: column;
+  }
+
+  .over-mij-tekst,
+  .over-mij-foto {
+    flex: 1 1 100%;
+  }
+}
