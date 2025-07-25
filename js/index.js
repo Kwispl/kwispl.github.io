@@ -60,7 +60,27 @@ fetch('clients.json')
     });
 
     const totaalKeren = data.klanten.reduce((sum, klant) => sum + klant.aantal_keren, 0);
-    const totaalDagen = data.klanten.reduce((sum, klant) => sum + klant.aantal_dagen, 0);
+    let totaalDagen = 0;
+
+    data.klanten.forEach(klant => {
+      const dagen = klant.aantal_dagen;
+
+      if (Array.isArray(dagen)) {
+        // Verwijder komma’s en spaties, en tel elk item op
+        dagen.forEach(dag => {
+          const nummer = parseInt(dag.toString().replace(/[^0-9]/g, ''), 10);
+          if (!isNaN(nummer)) {
+            totaalDagen += nummer;
+          }
+        });
+      } else {
+        // Enkel getal
+        const nummer = parseInt(dagen, 10);
+        if (!isNaN(nummer)) {
+          totaalDagen += nummer;
+        }
+      }
+    });
 
     const gemiddeld = (totaalDagen / totaalKeren).toFixed(0);
 

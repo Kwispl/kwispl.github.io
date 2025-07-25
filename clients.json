@@ -7,7 +7,7 @@
       "review": "",
       "locatie": "Nevele",
       "aantal_keren": 4,
-      "aantal_dagen": 59
+      "aantal_dagen": [4, 43, 2, 7]
     },
     {
       "baasje": "Margaret",
