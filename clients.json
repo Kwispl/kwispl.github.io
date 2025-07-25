@@ -2,7 +2,7 @@
   "klanten": [
     {
       "baasje": "Jonathan",
-      "beestje": "Momo",
+      "beestjes": "Momo",
       "soort_beestje": ["Kat"],
       "review": "",
       "locatie": "Nevele",
@@ -11,7 +11,7 @@
     },
     {
       "baasje": "Margaret",
-      "beestje": "Saaba",
+      "beestjes": "Saaba",
       "soort_beestje": ["Kat"],
       "review": "",
       "locatie": "Nevele",
@@ -20,7 +20,7 @@
     },
     {
       "baasje": "Liesbeth",
-      "beestje": "Bentley",
+      "beestjes": "Bentley",
       "soort_beestje": ["Hond"],
       "review": "",
       "locatie": "Gent",
@@ -29,7 +29,7 @@
     },
     {
       "baasje": "Ilse",
-      "beestje": "Charli en Felix",
+      "beestjes": ["Charli", "Felix"],
       "soort_beestje": ["Kat", "Hond"],
       "review": "",
       "locatie": "Landegem",
@@ -38,7 +38,7 @@
     },
     {
       "baasje": "Emi",
-      "beestje": "Nelle en Nestor",
+      "beestjes": ["Nelle", " Nestor"],
       "soort_beestje": ["Kat", "Kat"],
       "review": "",
       "locatie": "Merendree",
@@ -47,7 +47,7 @@
     },
     {
       "baasje": "Sofie",
-      "beestje": "Woonie",
+      "beestjes": "Woonie",
       "soort_beestje": ["Kat"],
       "review": "",
       "locatie": "Nevele",

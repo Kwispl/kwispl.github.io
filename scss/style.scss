@@ -104,9 +104,32 @@ footer a:hover {
   padding: 1em;
   margin-top: 4em;
   color: #333;
+
+  @media (max-width: 600px) {
+  .weetje {
+    font-size: 0.95em;
+    line-height: 1.4;
+  }
+}
 }
 .weetje strong {
   color: #e07a5f;
+}
+
+.weetje-lijst {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1em;
+}
+
+.weetje-lijst li {
+  margin-bottom: 0.5em;
+  font-size: 1em;
+}
+
+.accent {
+  color: #e07a5f;
+  font-weight: bold;
 }
 
 .grafiek-section .inner {

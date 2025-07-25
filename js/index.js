@@ -84,7 +84,29 @@ fetch('clients.json')
 
     const gemiddeld = (totaalDagen / totaalKeren).toFixed(0);
 
-    document.getElementById('gemiddeld-tekst').textContent = `Gemiddeld word ik ${gemiddeld} dagen per boeking ingeschakeld.`;
+    // Extra weetjes
+    const klantenMetHerhaling = data.klanten.filter(k => k.aantal_keren > 1).length;
+
+    let totaalBeestjes = 0;
+    data.klanten.forEach(klant => {
+    const b = klant.beestjes;
+    if (Array.isArray(b)) {
+        totaalBeestjes += b.length;
+    } else if (typeof b === "string") {
+        totaalBeestjes += 1;
+    }
+    });
+
+    // Tekst genereren
+    const weetjeEl = document.getElementById("gemiddeld-tekst");
+    weetjeEl.innerHTML = `
+        <p><strong>Weetjes! 🐾</strong></p>
+        <ul class="weetje-lijst">
+            <li>📆 <span class="accent">${data.klanten.length}</span> baasjes boekten me al <span class="accent">${totaalKeren}</span> keer, telkens gemiddeld voor <span class="accent">${gemiddeld}</span> dagen.</li>
+            <li>🔁 <span class="accent">${klantenMetHerhaling}</span> baasje${klantenMetHerhaling === 1 ? '' : 's'} boekte${klantenMetHerhaling === 1 ? '' : 'n'} mij meerdere keren.</li>
+            <li>🐶 In totaal zorgde ik al voor <span class="accent">${totaalBeestjes}</span> dieren.</li>
+        </ul>
+        `;
   })
   .catch(error => {
     console.error("Fout bij laden van clients.json:", error);
