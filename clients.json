@@ -7,7 +7,7 @@
       "review": "",
       "locatie": "Nevele",
       "aantal_keren": 4,
-      "aantal_dagen": [4, 43, 2, 7]
+      "aantal_dagen": [4, 43, 2, 7, 10]
     },
     {
       "baasje": "Margaret",
@@ -53,6 +53,15 @@
       "locatie": "Nevele",
       "aantal_keren": 1,
       "aantal_dagen": 4
+    },
+    {
+      "baasje": "Kimberly",
+      "beestjes": ["Blue", "Zorba"],
+      "soort_beestje": ["Hond", "Hond"],
+      "review": "",
+      "locatie": "Zomergem",
+      "aantal_keren": 1,
+      "aantal_dagen": 8
     }
   ]
 }
