@@ -43,7 +43,7 @@
       "review": "",
       "locatie": "Merendree",
       "aantal_keren": 1,
-      "aantal_dagen": 4
+      "aantal_dagen": [4, 5]
     },
     {
       "baasje": "Sofie",
