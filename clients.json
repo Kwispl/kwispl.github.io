@@ -2,7 +2,7 @@
   "klanten": [
     {
       "baasje": "Jonathan",
-      "beestjes": "Momo",
+      "beestjes": ["Momo"],
       "soort_beestje": ["Kat"],
       "review": "",
       "locatie": "Nevele",
@@ -11,21 +11,21 @@
     },
     {
       "baasje": "Margaret",
-      "beestjes": "Saaba",
+      "beestjes": ["Saaba"],
       "soort_beestje": ["Kat"],
       "review": "",
       "locatie": "Nevele",
       "aantal_keren": 1,
-      "aantal_dagen": 4
+      "aantal_dagen": [4]
     },
     {
       "baasje": "Liesbeth",
-      "beestjes": "Bentley",
+      "beestjes": ["Bentley"],
       "soort_beestje": ["Hond"],
       "review": "",
       "locatie": "Gent",
       "aantal_keren": 1,
-      "aantal_dagen": 1
+      "aantal_dagen": [1]
     },
     {
       "baasje": "Ilse",
@@ -34,25 +34,25 @@
       "review": "",
       "locatie": "Landegem",
       "aantal_keren": 1,
-      "aantal_dagen": 1
+      "aantal_dagen": [1]
     },
     {
       "baasje": "Emi",
-      "beestjes": ["Nelle", " Nestor"],
+      "beestjes": ["Nelle", "Nestor"],
       "soort_beestje": ["Kat", "Kat"],
       "review": "",
       "locatie": "Merendree",
-      "aantal_keren": 1,
+      "aantal_keren": 2,
       "aantal_dagen": [4, 5]
     },
     {
       "baasje": "Sofie",
-      "beestjes": "Woonie",
+      "beestjes": ["Woonie"],
       "soort_beestje": ["Kat"],
       "review": "",
       "locatie": "Nevele",
       "aantal_keren": 1,
-      "aantal_dagen": 4
+      "aantal_dagen": [4]
     },
     {
       "baasje": "Kimberly",
@@ -61,7 +61,7 @@
       "review": "",
       "locatie": "Zomergem",
       "aantal_keren": 1,
-      "aantal_dagen": 8
+      "aantal_dagen": [8]
     }
   ]
 }
