@@ -16,7 +16,7 @@
       "review": "",
       "locatie": "Nevele",
       "aantal_keren": 1,
-      "aantal_dagen": [4]
+      "aantal_dagen": [4, 16]
     },
     {
       "baasje": "Liesbeth",
@@ -60,6 +60,15 @@
       "soort_beestje": ["Hond", "Hond"],
       "review": "",
       "locatie": "Zomergem",
+      "aantal_keren": 1,
+      "aantal_dagen": [8]
+    },
+    {
+      "baasje": "Ignace",
+      "beestjes": ["Filou", "Spookske", "Nala", "Mousty", "Zorro", "Noodles", "Sushi", "Lola", "Maki", "Zowee"],
+      "soort_beestje": ["Kat", "Kat", "Kat", "Kat", "Kat", "Kat", "Kat", "Kat", "Kat", "Kat"],
+      "review": "",
+      "locatie": "Landegem",
       "aantal_keren": 1,
       "aantal_dagen": [8]
     }
